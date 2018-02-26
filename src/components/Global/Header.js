@@ -1,5 +1,8 @@
+// dependencias
 import React, { Component } from 'react';
 import firebase from 'firebase';
+import PropTypes from 'prop-types';
+// assets
 import logo from './images/logo.svg';
 import './css/Header.css';
 
@@ -9,7 +12,7 @@ class Header extends Component {
     this.state = {
       user: null
     };
-    //Al utilizar el objeto this realizar un bindeo 
+    //Al utilizar el objeto this realizar un bindeo
     this.handleAuth = this.handleAuth.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.renderLoginButton = this.renderLoginButton.bind(this);
@@ -55,12 +58,24 @@ class Header extends Component {
     }
   }
 
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    items: PropTypes.array.isRequired
+  };
   render() {
+    // this.prop contiene las propiedades que enviamos a los componentes
+    const { title, items } = this.props;
+    // lo anterior equivale a esto:
+    // const title = this.prop.title;
+    // const items = this.prop.items;
     return (
       <div className="Header">
         <div className="Logo">
           <img src={logo} alt="logo" />
-          <h1 className="App-title">Ecommerce React</h1>
+          <h2>{title}</h2>
+          <ul className = "menu">
+            {items && items.map((item, key) => <li key= {key}>{item.title}</li>)}
+          </ul>
         </div>
         <p className="App-intro">
           {this.renderLoginButton()}
