@@ -7,7 +7,6 @@ class Content extends Component {
       <div className="Content">
         <h1>contenido de ejemplo</h1>
         <p>Parrafo de ejemplo</p>
-        <MercadoLibreApp />
       </div>
     );
   }

@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import firebase from 'firebase';
 import './index.css';
 import App from './components/App';
-import MercadoLibreApp from './components/Global/MercadoLibreApp';
+// import MercadoLibreApp from './components/Global/MercadoLibreApp';
 import registerServiceWorker from './registerServiceWorker';
 
 firebase.initializeApp({
