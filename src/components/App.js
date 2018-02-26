@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import Header from './Global/Header'
 import Content from './Global/Content'
 import Footer from './Global/Footer'
-// import MercadoLibreApp from './components/Global/MercadoLibreApp'
 
 // Data (importar data)
 import items from '../data/menu';
@@ -21,7 +20,7 @@ class App extends Component {
     );
   }
 
-  
+
 }
 
 export default App;
