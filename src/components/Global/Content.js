@@ -20,8 +20,8 @@ class Content extends Component {
           </div>
         </div>
         <h1 className="Items">Shop our items</h1>
-        <MercadoInicio/>
         <MercadoLibreApp />
+        <MercadoInicio/>
       </div>
     );
   }
