@@ -28,6 +28,10 @@ class MercadoLibreApp extends Component {
         let pictures = data.results.map((pic) => {
         return(
           <div className="product" key = {pic.id}>
+            {/*<img className="imgProduct" src= {pic.thumbnail} />
+            <p className="titleProduct">{pic.title}</p>
+            <p>${pic.price}</p>*/}
+            <h1 className="Search">Find more</h1>
             <img className="imgProduct" src= {pic.thumbnail} />
             {/*<p className="titleProduct">{pic.title}</p>*/}
             {/*<p>${pic.price}</p>*/}

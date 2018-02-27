@@ -18,9 +18,9 @@ import './css/Mercado.css';
   		console.log(data);
   		let pictures = data.results.map((pic) => {
   			return(
-          <div class="product" key = {pic.results}>
-            <img class="imgProduct" src= {pic.thumbnail} />
-            <p class="titleProduct">{pic.title}</p>
+          <div className="product" key = {pic.results}>
+            <img className="imgProduct" src= {pic.thumbnail} />
+            <p className="titleProduct">{pic.title}</p>
             <p>${pic.price}</p>
             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_s-xclick" />
@@ -39,7 +39,7 @@ import './css/Mercado.css';
   		}
   	render() {
 	      return (
-	        <div className="container">
+	        <div className="PicturesContainer">
 						{this.state.pictures[0]}
             {this.state.pictures[1]}
             {this.state.pictures[2]}

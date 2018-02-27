@@ -7,5 +7,19 @@
   text-align: center;
 }
 .imgProduct{
-  /* que alguien la centre por el amor de Dio!  */
+  text-align: center;
+}
+
+.PicturesContainer{
+  text-align: center;
+  margin-top: 2%;
+}
+
+form{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.Search{
+  text-align: center;
 }

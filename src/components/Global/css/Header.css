@@ -7,22 +7,27 @@
   float: left;
   width: 10em;
 }
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
 .menu {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
+  font-weight: bold;
 }
+
 .menu li {
   display: inline-block;
   padding-right: 10px;
 }
+
 .User{
   color: black;
+  /*float: right;*/
+  font-size: 10px;
+  display: block;
 }
+
 .Login-btn{
   background-color: white;
   color: grey;
