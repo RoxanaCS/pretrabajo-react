@@ -46,7 +46,7 @@ class Header extends Component {
       return (
         <div className="User">
           <img src={this.state.user.photoUrl} />
-          Hola, {this.state.user.displayName}
+          Bienvenida, {this.state.user.displayName}
           <button onClick={this.handleLogout}>salir</button>
         </div>
       );

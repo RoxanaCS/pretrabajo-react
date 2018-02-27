@@ -9,7 +9,7 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <h1>Esto es lo que tenemos para ti</h1>
+        <h1 className="Offers">Special offers for you</h1>
         <div className="Sales">
           <div className="Sales1">
             <img src={promo1} alt="promo1" className="Promo1" />
@@ -18,6 +18,7 @@ class Content extends Component {
             <img src={promo2} alt="promo2" className="Promo2" />
           </div>
         </div>
+        <h1 className="Items">Shop our items</h1>
         <MercadoInicio/>
         <MercadoLibreApp />
       </div>

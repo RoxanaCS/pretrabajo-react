@@ -31,6 +31,7 @@ class MercadoLibreApp extends Component {
             {/*<img className="imgProduct" src= {pic.thumbnail} />
             <p className="titleProduct">{pic.title}</p>
             <p>${pic.price}</p>*/}
+            <h1 className="Search">Find more</h1>
             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_s-xclick" />
               <input type="hidden" name="encrypted" value="" />
