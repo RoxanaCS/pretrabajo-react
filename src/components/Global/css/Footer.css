@@ -1,5 +1,18 @@
-.Footer {
-  width: 90%;
+.footer {
+
+}
+footer{
+  color: #666666;
+  font-size: 14px;
   text-align: center;
-  margin: 0 auto;
+  padding: 32px;
+  background-color: #DDDDDD;
+}
+.footer-links{
+  margin-bottom: 24px;
+}
+.footer-links a{
+  margin: 0 8px;
+  color: #666666;
+  text-decoration: none;
 }

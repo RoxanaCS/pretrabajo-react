@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './css/Content.css';
+import MercadoInicio from './MercadoInicio';
 import MercadoLibreApp from './MercadoLibreApp';
+import promo1 from './images/promo1.png';
+import promo2 from './images/promo2.png';
 
 class Content extends Component {
   render() {
@@ -9,18 +12,13 @@ class Content extends Component {
         <h1>Esto es lo que tenemos para ti</h1>
         <div className="Sales">
           <div className="Sales1">
-          <img className="Promo1" src="src/components/Global/images/promo1.png" />
+            <img src={promo1} alt="promo1" className="Promo1" />
           </div>
           <div className="Sales2">
-          <img className="Promo2" src="src/components/Global/images/promo2.png" />
+            <img src={promo2} alt="promo2" className="Promo2" />
           </div>
         </div>
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="TKQLJ4VXZNKJ2" />
-        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-      </form>
+        <MercadoInicio/>
         <MercadoLibreApp />
       </div>
     );
