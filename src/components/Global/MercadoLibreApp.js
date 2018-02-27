@@ -34,6 +34,7 @@ class MercadoLibreApp extends Component {
               <p>${pic.price}</p>
               <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method = "post" target = "_top">
                 <input type = "hidden" name = "cmd" value = "_xclick" />
+                <input type="hidden" name="business" value="asd@asdasd.cl" />
                 <input type = "image" src = "http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border = "0" name = "submit" alt = "Make payments with PayPal - it's fast, free and secure!" />
               </form>
             </div>

@@ -1,7 +1,7 @@
 // dependencias
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // assets
 import logo from './images/logo.png';
 import cart from './images/carrito.png';
@@ -9,7 +9,7 @@ import './css/Header.css';
 
 class Header extends Component {
   constructor() {
-    super();// heredando de otra clase,  super llama al  header hereda de componet, // state definir el estado de nuestro componente
+    super();// heredando de otra clase,  super llama al  header hereda de component, // state definir el estado de nuestro componente
     this.state = {
       user: null
     };
@@ -59,10 +59,10 @@ class Header extends Component {
     }
   }
 
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    items: PropTypes.array.isRequired
-  };
+  // static propTypes = {
+  //   title: PropTypes.string.isRequired,
+  //   items: PropTypes.array.isRequired
+  // };
   render() {
     // this.prop contiene las propiedades que enviamos a los componentes
     // const { title, items } = this.props;
