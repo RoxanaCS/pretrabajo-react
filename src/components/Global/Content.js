@@ -5,8 +5,16 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <h1>contenido de ejemplo</h1>
-        <p>Parrafo de ejemplo</p>
+        <h1>Esto es lo que tenemos para ti</h1>
+        <div className="Sales">
+          <div className="Sales1">
+          <img className="Promo1" src="src/components/Global/images/promo1.png" />
+          </div>
+          <div className="Sales2">
+          <img className="Promo2" src="src/components/Global/images/promo2.png" />
+          </div>
+        </div>
+
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick" />
         <input type="hidden" name="hosted_button_id" value="TKQLJ4VXZNKJ2" />
