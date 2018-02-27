@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import PropTypes from 'prop-types';
 // assets
-import logo from './images/logo.svg';
+import logo from './images/logo.png';
 import './css/Header.css';
 
 class Header extends Component {
@@ -44,16 +44,16 @@ class Header extends Component {
 
     if (this.state.user) {
       return (
-        <div>
-          <img src={this.state.user.photoUrl} alt={this.state.user.displayName} />
-          Hola {this.state.user.displayName}
+        <div className="User">
+          <img src={this.state.user.photoUrl} />
+          Hola, {this.state.user.displayName}
           <button onClick={this.handleLogout}>salir</button>
         </div>
       );
     } else {
       //si no lo esta
       return (
-        <button onClick={this.handleAuth}> Ingresar con google </button>
+        <button className="Login-btn" onClick={this.handleAuth}> Ingresar con google </button>
       );
     }
   }
@@ -71,8 +71,7 @@ class Header extends Component {
     return (
       <div className="Header">
         <div className="Logo">
-          <img src={logo} alt="logo" />
-          <h2>{title}</h2>
+          <img src={logo} alt="logo" className="Logo-img" />
           <ul className = "menu">
             {items && items.map((item, key) => <li key= {key}>{item.title}</li>)}
           </ul>

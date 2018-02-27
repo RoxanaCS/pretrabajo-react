@@ -6,6 +6,7 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <p>Footer-Copyright...</p>
+        hola ola
       </div>
     );
   }
