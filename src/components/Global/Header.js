@@ -77,7 +77,7 @@ class Header extends Component {
           </ul> */}
         </div>
         <div className = "ShoppingCart">
-          <img src = {cart} art = 'cart' className = 'ShopCart' />
+          <img src = {cart} art = 'cart' className = 'ShopCart' alt = ""/>
         </div>
         <p className = "App-intro">
           {this.renderLoginButton()}
