@@ -1,0 +1,11 @@
+.product {
+  display: inline-block;
+  width: 20em;
+}
+.titleProduct{
+  font-size: 0.8em;
+  text-align: center;
+}
+.imgProduct{
+  /* que alguien la centre por el amor de Dio!  */
+}
