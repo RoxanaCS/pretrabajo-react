@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import PropTypes from 'prop-types';
 // assets
 import logo from './images/logo.png';
-import cart from './images/carrito.png'
+import cart from './images/carrito.png';
 import './css/Header.css';
 
 class Header extends Component {
@@ -13,22 +13,25 @@ class Header extends Component {
     this.state = {
       user: null
     };
-    //Al utilizar el objeto this realizar un bindeo
+    // Al utilizar el objeto this realizar un bindeo
     this.handleAuth = this.handleAuth.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.renderLoginButton = this.renderLoginButton.bind(this);
   }
 
   componentWillMount() { // este metodo es un ciclo de vida, se dispara una vez en componente ha sifo renderizado
-    firebase.auth().onAuthStateChanged(user => {  //devuelve un objeto usuario  , cada evz que salgamos o entramos tendra la info el usuario
+    firebase.auth().onAuthStateChanged(user => {
+      // devuelve un objeto usuario  , cada evz que salgamos o entramos tendra la info el usuario
       this.setState({ user });
     });
   }
 
   handleAuth() {
-    const provider = new firebase.auth.GoogleAuthProvider(); //proveedor de google
+    const provider = new firebase.auth.GoogleAuthProvider();
+    // proveedor de google
 
-    firebase.auth().signInWithPopup(provider) //este sgning devuelve una promesa
+    firebase.auth().signInWithPopup(provider)
+    // este sgning devuelve una promesa
       .then(result => console.log(`${result.user.email} ha iniciado sesión `))
       .catch(error => console.log(`Error ${error.code}: ${error.message}`));
   }
