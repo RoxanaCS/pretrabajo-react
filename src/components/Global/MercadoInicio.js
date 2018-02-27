@@ -19,7 +19,7 @@ import './css/Mercado.css';
   		let pictures = data.results.map((pic) => {
   			return(
           <div className="product" key = {pic.results}>
-            <img className="imgProduct" src= {pic.thumbnail} />
+            <img className = "imgProduct" src = {pic.thumbnail} alt = "products" />
             <p className="titleProduct">{pic.title}</p>
             <p>${pic.price}</p>
             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -43,6 +43,12 @@ import './css/Mercado.css';
 						{this.state.pictures[0]}
             {this.state.pictures[1]}
             {this.state.pictures[2]}
+            {this.state.pictures[3]}
+            {this.state.pictures[4]}
+            {this.state.pictures[5]}
+            {this.state.pictures[6]}
+            {this.state.pictures[7]}
+            {this.state.pictures[8]}
 	        </div>
 	      )
 	    }

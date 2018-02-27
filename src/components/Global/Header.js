@@ -16,7 +16,6 @@ class Header extends Component {
     this.handleAuth = this.handleAuth.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.renderLoginButton = this.renderLoginButton.bind(this);
-
   }
 
   componentWillMount() { // este metodo es un ciclo de vida, se dispara una vez en componente ha sifo renderizado
@@ -44,8 +43,8 @@ class Header extends Component {
 
     if (this.state.user) {
       return (
-        <div className="User">
-          <img src={this.state.user.photoUrl} />
+        <div className = "User">
+          <img src = {this.state.user.photoUrl} alt = "photo_product" />
           Bienvenida, {this.state.user.displayName}
           <button onClick={this.handleLogout}>salir</button>
         </div>
@@ -53,7 +52,7 @@ class Header extends Component {
     } else {
       //si no lo esta
       return (
-        <button className="Login-btn" onClick={this.handleAuth}> Ingresar con google </button>
+        <button className = "Login-btn" onClick = {this.handleAuth}> Ingresar con google </button>
       );
     }
   }
@@ -69,14 +68,14 @@ class Header extends Component {
     // const title = this.prop.title;
     // const items = this.prop.items;
     return (
-      <div className="Header">
-        <div className="Logo">
-          <img src={logo} alt="logo" className="Logo-img" />
+      <div className = "Header">
+        <div className = "Logo">
+          <img src = {logo} alt = "logo" className = "Logo-img" />
           <ul className = "menu">
             {items && items.map((item, key) => <li key= {key}>{item.title}</li>)}
           </ul>
         </div>
-        <p className="App-intro">
+        <p className = "App-intro">
           {this.renderLoginButton()}
         </p>
       </div>
