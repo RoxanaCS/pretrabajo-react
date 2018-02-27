@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import PropTypes from 'prop-types';
 // assets
 import logo from './images/logo.png';
+import cart from './images/carrito.png'
 import './css/Header.css';
 
 class Header extends Component {
@@ -44,15 +45,15 @@ class Header extends Component {
     if (this.state.user) {
       return (
         <div className = "User">
-          <img src = {this.state.user.photoUrl} alt = "photo_product" />
-          Bienvenida, {this.state.user.displayName}
-          <button onClick={this.handleLogout}>salir</button>
+          <img width="50" src={this.state.user.photoURL} alt={this.state.displayName} className='UserImg' />
+          Welcome, {this.state.user.displayName}
+          <button onClick={this.handleLogout} className="Logout-btn">Log-out</button>
         </div>
       );
     } else {
       //si no lo esta
       return (
-        <button className = "Login-btn" onClick = {this.handleAuth}> Ingresar con google </button>
+        <button className = "Login-btn" onClick = {this.handleAuth}> Log In with Google </button>
       );
     }
   }
@@ -71,9 +72,12 @@ class Header extends Component {
       <div className = "Header">
         <div className = "Logo">
           <img src = {logo} alt = "logo" className = "Logo-img" />
-          <ul className = "menu">
+          {/* <ul className = "menu">
             {items && items.map((item, key) => <li key= {key}>{item.title}</li>)}
-          </ul>
+          </ul> */}
+        </div>
+        <div className = "ShoppingCart">
+          <img src = {cart} art = 'cart' className = 'ShopCart' />
         </div>
         <p className = "App-intro">
           {this.renderLoginButton()}
