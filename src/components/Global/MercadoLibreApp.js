@@ -31,16 +31,15 @@ class MercadoLibreApp extends Component {
             {/*<img className="imgProduct" src= {pic.thumbnail} />
             <p className="titleProduct">{pic.title}</p>
             <p>${pic.price}</p>*/}
-            <h1 className="Search">Find more</h1>
             <img className="imgProduct" src= {pic.thumbnail} />
-            {/*<p className="titleProduct">{pic.title}</p>*/}
-            {/*<p>${pic.price}</p>*/}
+            <p className="titleProduct">{pic.title}</p>
+            <p>${pic.price}</p>
             <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_xclick" />
-              <input type="hidden" name="business" value="asd@asdasd.cl" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="text" name="item_name" value={pic.title} />
-              <input type="text" name="amount" value="" placeholder={pic.price} />
+              {/*<input type="hidden" name="business" value="asd@asdasd.cl" />
+              <input type="hidden" name="currency_code" value="USD" />*/}
+              {/*<input type="text" name="item_name" value={pic.title} />
+              <input type="text" name="amount" value="" placeholder={pic.price} />*/}
               <input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" />
             </form>
 
@@ -60,10 +59,9 @@ class MercadoLibreApp extends Component {
 	        <div className="container">
           <form onSubmit={this.handleSubmit}>
             <label>
-              Name:
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
+              <input class="searchInput" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Find your product..." />
             </label>
-            <input type="submit" value="Submit" />
+            <input class="searchButton" type="submit" value="Submit" />
           </form>
 						{this.state.pictures}
 	        </div>
