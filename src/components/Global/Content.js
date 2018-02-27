@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './css/Content.css';
-import MercadoLibreApp from './MercadoLibreApp'
-
+import MercadoLibreApp from './MercadoLibreApp';
 
 class Content extends Component {
   render() {
