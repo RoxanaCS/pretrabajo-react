@@ -39,9 +39,7 @@ class Header extends Component {
       .catch(error => console.log(`Error ${error.code}: ${error.message}`));
   }
 
-
   renderLoginButton() {
-
     if (this.state.user) {
       return (
         <div className = "User">
@@ -51,7 +49,7 @@ class Header extends Component {
         </div>
       );
     } else {
-      //si no lo esta
+      // si no lo esta
       return (
         <button className = "Login-btn" onClick = {this.handleAuth}> Log In with Google </button>
       );
@@ -64,7 +62,7 @@ class Header extends Component {
   };
   render() {
     // this.prop contiene las propiedades que enviamos a los componentes
-    const { title, items } = this.props;
+    // const { title, items } = this.props;
     // lo anterior equivale a esto:
     // const title = this.prop.title;
     // const items = this.prop.items;
